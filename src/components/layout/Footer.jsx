@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap justify-between gap-3.5 border-t border-white/10 py-5 text-[12.5px]">
-          <span>© 2026 Sweetora Foods Pvt. Ltd. All rights reserved.</span>
+          <span>© 2026 Sweetora Foods Pvt. Ltd. All rights reserved. rb.rohit Developer</span>
           <span>FSSAI Lic. 10012043001234 · Made with butter, not shortcuts.</span>
         </div>
       </div>
