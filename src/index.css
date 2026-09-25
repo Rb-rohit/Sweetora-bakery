@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-h: 118px;
+}
+@media (max-width: 899px) {
+  :root {
+    --header-h: 70px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #2b1b18;
+  background: #fff9f4;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #2b1b18;
+}
+::selection {
+  background: #f7b2b7;
+}
+:focus-visible {
+  outline: 2px solid #e85d75;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Accordion panel height transition (content height is dynamic, so we
+   animate via grid-template-rows rather than a fixed max-height) */
+.acc-panel-grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+.acc-panel-grid.open {
+  grid-template-rows: 1fr;
+}
+.acc-panel-grid > div {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
